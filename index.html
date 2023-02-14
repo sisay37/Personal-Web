@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sisay CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="continer">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>IT Solution Provider</p>
+                <h1>My name is Sisay Ayele</h1>
+            </div>
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        about.me is a personal web hosting service co-founded by Ryan Freitas, <br> Conrad and Tim Young in October 2009. The site offers <br>registered users a simple platform from which <br>to link multiple online identities, relevant external <br>sites, and popular social networking websites such as Facebook, 
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Networking</span><br> Implementation of a computer network infrastructur</li>
+                            <li><span>Software Development</span><br>designing, programming, documenting, testing, and bug fixing </li>
+                            <li><span>IT Consultancy</span><br>Responsible for helping businesses and organizations manage their technology use</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiance">
+                        <ul>
+                            <li><span>Networking</span><br> Implementation of a computer network infrastructur</li>
+                            <li><span>Software Development</span><br>designing, programming, documenting, testing, and bug fixing </li>
+                            <li><span>IT Consultancy</span><br>Responsible for helping businesses and organizations manage their technology use</li>
+                        </ul>
+                    </div><div class="tab-contents" id="education" >
+                        <ul>
+                            <li><span>Networking</span><br> Implementation of a computer network infrastructur</li>
+                            <li><span>Software Development</span><br>designing, programming, documenting, testing, and bug fixing </li>
+                            <li><span>IT Consultancy</span><br>Responsible for helping businesses and organizations manage their technology use</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------services-------------------->
+    <div id="srvices">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="srvisces-list">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+    </script>
+    
+</body>
+</html>
